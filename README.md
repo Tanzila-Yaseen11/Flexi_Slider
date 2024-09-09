@@ -29,8 +29,9 @@ Enjoy the magic of a fully responsive, elegant slider! 🎉
 For semantic structure and accessibility
 ### CSS3: 
 For beautiful design and smooth animations
-🌐 Live Demo:
+### 🌐 Live Demo:
 Check out the live demo here!
+https://tanzila-yaseen11.github.io/Flexi_Slider/
 
 ## 🤝 Contributing:
 Contributions are always welcome! Feel free to fork this project, submit issues, or make pull requests. Let’s make this even more awesome together! 💡
