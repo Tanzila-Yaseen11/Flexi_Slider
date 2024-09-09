@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    
+}
+/* Nav CSS */
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #9A54D6;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+  header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #fff;
+  }
+  header .navbar ul{
+     list-style: none;
+  }
+  header .navbar ul li{
+    position: relative;
+    float: left;
+  }
+  header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+  }
+  header .navbar ul li a:hover{
+    background-color: #5b357b;
+    color: #fff;
+  }
+  header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #C28BE7  ;
+    display: none;
+  }
+  header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+  }
+  header .navbar ul li ul li ul {
+    left: 200px;
+    top: 0;
+  }
+  header .navbar ul li:focus-within > ul,
+  header .navbar ul li:hover > ul{
+    display: initial;
+  }
+  #menu-bar{
+    display: none;
+  }
+  header label{
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+  @media(max-width: 991px) {
+    header{
+      padding: 20px;
+    }
+    header label{
+      display: initial;
+    }
+    header .navbar{
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: #9A54D6;
+      border-top: 1px solid rgba(0, 0, 0, .1);
+      display: none;
+    }
+    header .navbar ul li{
+      width: 100%;
+    }
+    header .navbar ul li ul{
+      position: relative;
+      width: 100%;
+    }
+    header .navbar ul li ul li{
+      background: #C28BE7;
+    }
+    header .navbar ul li ul li ul{
+      width: 100%;
+      left: 0;
+    }
+    #menu-bar:checked ~ .navbar{
+      display: initial;
+    }
+  }
+  button{
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding: 9px 20px;
+    border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 10px 10px -0px;
+    color: white;
+    background-color: #9A54D6;
+}
+
+/* Conent CSS */
+section{
+    padding: 100px 200px;
+}
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background:  #9A54D6;
+
+}
+.home::before{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    /* background: rgba(3, 96, 251, 0.3); */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.home .content{
+    z-index: 888;
+    color: #fff;
+    width: 70%;
+    margin-top: 50px;
+}
+.home .content h1{
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+.home .content span{
+    font-size: 1em;
+    font-weight: 500;
+}
+.home .content p{
+    margin-bottom: 45px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-family: 300;
+    width: 70%;
+    color: #fff;
+    text-align: justify;
+}
+
+/* Watch Demo */
+.watch-demo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.watch-demo .play-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+.box{
+  display: flex;
+  justify-content:flex-start;
+}
+.form-box {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  /* box-shadow: 10px 10px 15px #c7c4c4, -10px -10px 15px #fff; */
+}
+.form-box input{
+  font-size: 18px;
+ 
+  padding: 15px 10px;
+  
+  outline: none;
+  
+}
+.form-box button{
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background: #C28BE7;
+  cursor: pointer;
+  transition: .3s;
+}
+.form-box button:hover{
+  background-color: #5b357b;
+  color: white;
+}
+.home .content a{
+    background: transparent;
+    padding: 15px 35px;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid white;
+}
+.home .content a:hover{
+  background-color: #5b357b;
+  color: #fff;
+  
+}
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+.home #video{
+    z-index: 000;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+.slider-navigation{
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+.slider-navigation .nav-btn{
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0,5);
+    transition: 0.3s ease;
+}
+.slider-navigation .nav-btn.active{
+    background: #5b357b;
+}
+.slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 20px;
+}
+.slider-navigation .nav-btn:hover{
+    transform: scale(1.2);
+}
+.video-slide{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+.video-slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+
+/* Media Query */
+@media (max-width: 1040px) {
+    section{
+        padding: 0px 20px;
+    }   
+    .home .media-icons{
+        right: 15px;
+    }
+    .home .content h1{
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 50px;
+    }
+    .home .content span{
+        font-size: 0.8em;
+        font-weight: 400;
+    }
+    .home .content p{
+        margin-bottom: 65px;
+        line-height: 30px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: left;
+        width: 80%;
+    }
+    .home .content a{
+      background: transparent;
+      padding: 10px 25px;
+      color: #fff;
+      font-size: 1em;
+      font-weight: 400;
+      border: 1px solid white;
+  }
+    .watch-demo .play-icon 
+    {
+      font-size: 1px;
+      margin-right: 6px;
+}
+.form-box {
+
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.form-box input{
+  font-size: 15px;
+  padding: 10px 5px;
+  outline: none;
+  
+}
+.form-box button{
+  color: #fff;
+  line-height: 20px;
+  padding: 9px 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #C28BE7;
+  cursor: pointer;
+  transition: .3s;
+}
+}
+/* @media  (min-width : 360px) {
+  
+
+  .home .social-icons{
+    right: 7px;
+}
+.home .content h1{
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 40px;
+}
+.home .content span{
+    font-size: 0.8em;
+    font-weight: 400;
+}
+.home .content p{
+    margin-bottom: 75px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+}
+.home .content a{
+  background: transparent;
+  padding: 9px 10px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 300;
+  border: 1px solid white;
+}
+.watch-demo .play-icon 
+{
+  font-size: 1px;
+  margin-right: 3px;
+}
+.form-box {
+
+border-radius: 5px;
+background-color: transparent;
+border: 1px solid white;
+color: white;
+
+}
+.form-box input{
+font-size: 14px;
+padding: 8px 9px;
+outline: none;
+
+}
+.form-box button{
+color: #fff;
+line-height: 10px;
+padding: 5px 8px;
+font-size: 10px;
+border: none;
+border-radius: 3px;
+background: #C28BE7;
+cursor: pointer;
+transition: .3s;
+}
+} */
